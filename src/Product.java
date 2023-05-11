@@ -29,4 +29,23 @@ public abstract class Product {
             }
         }
     }
+    public static Product getProducts (String prefix) throws AmbigiousProductException, IndexOutOfBoundsException{
+        ArrayList<Product> productsWithPrefix = new ArrayList<>();
+        for (Product x:productsArray) {
+           if(x.getName().startsWith(prefix)){
+               productsWithPrefix.add(x);
+           }
+        }
+        if(productsWithPrefix.size() == 1){
+            return productsWithPrefix.get(0);
+        }else if(productsWithPrefix.size() > 1){
+            ArrayList<String> productsNamesForException = new ArrayList<>();
+            for (Product x:productsWithPrefix) {
+                productsNamesForException.add(x.getName());
+            }
+            throw new AmbigiousProductException(productsNamesForException);
+        }else{
+            throw new IndexOutOfBoundsException();
+        }
+    }
 }
