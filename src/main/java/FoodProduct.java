@@ -6,13 +6,15 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class FoodProduct extends Product {
-    Map<String, double[]> regionsPrices = new HashMap<>();
+    private Map<String, double[]> regionsPrices = new HashMap<>();
 
     public FoodProduct(String name, Map<String, double[]> regionsPrices) {
         this.name = name;
         this.regionsPrices = regionsPrices;
     }
-
+    public Map<String, double[]> getRegionsPrices() {
+        return regionsPrices;
+    }
     public static FoodProduct fromCsv(Path path) {
         String name;
         Map<String, double[]> regionsPrices = new HashMap<>();
