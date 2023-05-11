@@ -12,6 +12,8 @@ This repository contains the proposed solution to Exam #1 in the subject of Obje
 
 - `kol1_2022.pdf`: This file contains the exam tasks in PDF format. 
 You can access it via this link: https://github.com/llutsefer/Exam-1-ObjectOrientedProgramming-2022/files/11449941/kol1_2022.pdf
+- `kol_2022_tests.pdf`: The file contains the tests that needed to be written for this project in PDF format. 
+You can access it via this link: https://github.com/llutsefer/Exam-1-ObjectOrientedProgramming-2022/files/11454494/kol_2022_tests.pdf
 
 ## Disclaimer
 
