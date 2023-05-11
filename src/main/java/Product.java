@@ -45,7 +45,10 @@ public abstract class Product {
             }
             throw new AmbigiousProductException(productsNamesForException);
         }else{
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("No product with this prefix");
         }
+    }
+    public static int getIndexOfDate(int year, int month){
+        return ((year - 2010) * 12) + (month - 1);
     }
 }

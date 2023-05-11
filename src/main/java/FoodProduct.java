@@ -35,7 +35,7 @@ public class FoodProduct extends Product {
     }
 
     public double getPrice(int year, int month, String province) {
-        int indexOfDate = ((year - 2010) * 12) + (month - 1);
+        int indexOfDate = Product.getIndexOfDate(year, month);
         if (this.regionsPrices.isEmpty() == false && year > 2009 && month < 13 && month > 0 && indexOfDate < 148 && this.regionsPrices.containsKey(province)) {
             return this.regionsPrices.get(province)[indexOfDate];
         } else {
@@ -45,7 +45,7 @@ public class FoodProduct extends Product {
 
     @Override
     public double getPrice(int year, int month) {
-        int indexOfDate = ((year - 2010) * 12) + (month - 1);
+        int indexOfDate = Product.getIndexOfDate(year, month);
         if(this.regionsPrices.isEmpty() == false && year > 2009 && month < 13 && month > 0 && indexOfDate < 148) {
             double result = 0;
             int iterator = 0;

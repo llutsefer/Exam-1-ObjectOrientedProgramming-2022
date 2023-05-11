@@ -35,7 +35,7 @@ public class NonFoodProduct extends Product {
 
     @Override
     public double getPrice(int year, int month) {
-        int indexOfDate = ((year-2010)*12)+(month-1);
+        int indexOfDate = Product.getIndexOfDate(year, month);
         if(this.prices != null && year > 2009 && month < 13 && month > 0 && indexOfDate < 148){
             return prices[indexOfDate];
         }else{
