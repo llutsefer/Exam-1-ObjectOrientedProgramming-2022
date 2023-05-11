@@ -1,4 +1,3 @@
-import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -21,15 +20,10 @@ public class Main {
         } catch (AmbigiousProductException e) {
             throw new RuntimeException(e);
         }
-        try {
-            System.out.println(Product.getProducts("Ja").getPrice(2020, 1));
-        } catch (AmbigiousProductException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            System.out.println(Product.getProducts("Qwerty").getPrice(2020, 1));
-        } catch (AmbigiousProductException e) {
-            throw new RuntimeException(e);
-        }
+        ///// 5 test////
+        Cart cartTest = new Cart();
+        cartTest.addProduct(petrol, 2);
+        System.out.println(cartTest.getPrice(2010, 4));
+        System.out.println(cartTest.getInflation(2010, 4, 2010, 2));
     }
 }
